@@ -1,0 +1,35 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "quotes": [2, "single"],
+    "semi": [2, "never"],
+    "no-unused-vars": 1,
+    "prefer-const": 1,
+    "no-const-assign": 1,
+    "no-undefined": 2,
+    "no-undef": 2,
+    "no-console": 0,
+    "react/prop-types": 0
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "15.6.2",
+    }
+  }
+}

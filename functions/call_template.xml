@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say voice="alice">
+    This is an automated secret santa call.
+    You are the secret santa for NAME_OF_TARGET
+  </Say>
+  <Play>https://secret-santa-bfeba.web.app/music.mp3</Play>
+  <Say voice="alice">
+    Good bye
+  </Say>
+</Response>

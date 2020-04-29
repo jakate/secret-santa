@@ -1,0 +1,167 @@
+$finnairBlue: #0b1560;
+
+$VIEWPORTS_CONFIG:
+    up-to 480px it-is "tiny",
+    up-to 800px it-is "small",
+    up-to 1200px it-is "medium",
+    up-to 1800px it-is "large",
+    beyond-that it-is "huge";
+
+@import 'reset';
+@import 'viewports';
+@import 'welcome';
+@import 'signup';
+@import 'header';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #A01818;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#react,
+#react > div {
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+}
+p {
+  margin: 0.5rem 0;
+}
+
+.Container {
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.Page .Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Button,
+input[type="submit"] {
+  background-color: #ED4141;
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 2px 2px 0px 2px rgba(206,52,52,1);
+  cursor: pointer;
+
+  &.Secondary {
+    background-color: #838383;
+    box-shadow: 2px 2px 0px 2px rgba(90,90,90,1);
+  }
+
+  &.Faded {
+    background-color: #b72c2c;
+    box-shadow: 2px 2px 0px 2px #941616;
+  }
+}
+
+.GenericForm {
+  width: 80%;
+
+  div {
+    margin: 10px 0;
+  }
+  .label {
+    display: block;
+    padding: 1rem 0 0.5rem;
+    font-size: 1rem;
+  }
+  input {
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+  }
+}
+
+.MultilineForm {
+  .FriendRow {
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+      padding: 0 10px;
+      min-width: 50px;
+      width: 45%;
+
+      &:last-child {
+        width: 10%;
+      }
+    }
+
+    .Button {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .Errors {
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.pushdown {
+
+    .Button {
+      width: 80%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+
+.ThankYou {
+  text-align: center;
+  padding: 0 2rem;
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 1rem 0;
+  }
+}
