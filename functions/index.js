@@ -71,15 +71,10 @@ exports.start = functions.region('europe-west3').https.onRequest((req, res) => {
     })
 
     finalList.forEach((person) => {
-      console.log('now I would call', person.name)
+      console.log('now I will call', person.name)
       console.log('number', person.phoneNumber)
       console.log('and tell that his/her target is', person.target.name)
-      if (allowedNumbers.indexOf(person.phoneNumber > 0)) {
-        console.log('calling')
-        makeTwilioCall(person.phoneNumber, person.target.name)
-      } else {
-        console.log('not calling')
-      }
+      makeTwilioCall(person.phoneNumber, person.target.name)
       console.log('-------------')
     })
 
