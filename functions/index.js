@@ -74,7 +74,11 @@ exports.start = functions.region('europe-west3').https.onRequest((req, res) => {
       console.log('now I will call', person.name)
       console.log('number', person.phoneNumber)
       console.log('and tell that his/her target is', person.target.name)
-      makeTwilioCall(person.phoneNumber, person.target.name)
+      if (person.phoneNumber === '+358012345678') {
+        console.log('Fake number, dont make a real call')
+      } else {
+        makeTwilioCall(person.phoneNumber, person.target.name)
+      }
       console.log('-------------')
     })
 
