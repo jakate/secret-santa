@@ -40,7 +40,6 @@ const makeTwilioCall = (callTo, name) => {
 
 exports.start = functions.region('europe-west3').https.onRequest((req, res) => {
   console.log('start')
-  console.log(req.body)
   return cors(req, res, () => {
     const friendlist = req.body.friends
 
@@ -50,8 +49,6 @@ exports.start = functions.region('europe-west3').https.onRequest((req, res) => {
       })
     }
 
-    console.log('friendlist')
-    console.log(friendlist)
     //const friendlist = JSON.parse(req.body).friends
     if (friendlist.length < 3) {
       return res.status(200).send({
