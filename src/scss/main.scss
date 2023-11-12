@@ -1,0 +1,137 @@
+$VIEWPORTS_CONFIG: up-to 480px it-is "tiny",
+  up-to 800px it-is "small",
+  up-to 1200px it-is "medium",
+  up-to 1800px it-is "large",
+  beyond-that it-is "huge";
+
+@import 'reset';
+@import 'viewports';
+@import 'welcome';
+@import 'form_page';
+@import 'header';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #A01818;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root,
+#root>div {
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+
+/* .Page .Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.Container {
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+  height: 100%;
+
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100%;
+
+  >* {
+    width: 100%;
+  }
+
+  .Header {
+    align-self: flex-start;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Footer {
+    align-self: flex-end;
+  }
+}
+
+
+.Button,
+input[type="submit"] {
+  background-color: #ED4141;
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 2px 2px 0px 2px rgba(206, 52, 52, 1);
+  cursor: pointer;
+
+  &.Secondary {
+    background-color: #838383;
+    box-shadow: 2px 2px 0px 2px rgba(90, 90, 90, 1);
+  }
+
+  &.Faded {
+    background-color: #b72c2c;
+    box-shadow: 2px 2px 0px 2px #941616;
+  }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.pushdown {
+
+    .Button {
+      width: 80%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}

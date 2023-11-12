@@ -1,0 +1,64 @@
+$particle_amount: 200;
+
+.Welcome {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Content {
+    z-index: 10;
+  }
+
+  h1 {
+    margin: 1rem 0;
+  }
+
+  .particle {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    background-color: #ffffff;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+  }
+
+  @for $i from 1 through $particle_amount {
+    $size: 2 + random(10);
+    $animation_length: 17 - $size + random(17);
+    $animation_length_half: 4 + round(random(15) / 2);
+    $blurryness: round($size/2) +px;
+
+    .particle:nth-child(#{$i}) {
+      z-index: round($size);
+      width: $size + px;
+      height: $size + px;
+      border-radius: $size + px;
+      animation-duration: $animation_length + s;
+      animation-delay: random($animation_length_half) * -1 + s;
+      box-shadow: 0px 0px $blurryness $blurryness rgb(255, 255, 255);
+    }
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh)
+  }
+
+  100% {
+    transform: translateY(100vh)
+  }
+}
