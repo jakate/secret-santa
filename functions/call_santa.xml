@@ -1,0 +1,20 @@
+<Response>
+  <Say voice="Polly.Matthew">
+    <break strength="x-weak" time="2s"/>
+    <prosody pitch="x-low">
+      Ho ho ho! MERRY CHRISTMAS! NAME_OF_RECEIVER
+      <break strength="x-weak" time="400ms"/>
+      I'm a little bit busy right now and I need to ask a favour.
+      <break strength="x-weak" time="1s"/>
+      it's about NAME_OF_TARGET. I have no time to make NAME_OF_TARGET a present.
+      <break strength="x-weak" time="200ms"/>
+      I was wondering. uhm.
+      <break strength="x-weak" time="200ms"/>
+      that maybe you could. uhm.
+      <break strength="x-weak" time="200ms"/>
+      you know. cover me
+      <break strength="x-weak" time="1s"/>
+      Merry Christmas NAME_OF_RECEIVER.
+    </prosody>
+  </Say>
+</Response>

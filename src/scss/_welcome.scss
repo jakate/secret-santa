@@ -1,0 +1,26 @@
+.Welcome {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Content {
+    z-index: 10;
+  }
+
+  h1 {
+    margin: 1rem 0;
+  }
+}
+
+.ThankYou {
+  height: 100%;
+}

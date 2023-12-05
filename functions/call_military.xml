@@ -1,0 +1,15 @@
+<Response>
+  <Say voice="Polly.Matthew">
+    <break strength="x-weak" time="2s"/>
+    <prosody volume="loud">
+      <prosody rate="fast">
+        <prosody pitch="-50%">Hello NAME_OF_RECEIVER</prosody>
+        <break strength="x-weak" time="1s"/>
+        Your target is NAME_OF_TARGET.
+        That's SPELLED_NAME.
+        NATO_NAME.
+        This message will self-destruct in 5..4..3..2..1...Over and out!
+      </prosody>
+    </prosody>
+  </Say>
+</Response>

@@ -1,0 +1,16 @@
+<Response>
+  <Say voice="Polly.Matthew-Neural">
+    <break strength="x-weak" time="2s"/>
+    Hello NAME_OF_RECEIVER
+    <break strength="x-weak" time="400ms"/>
+    It's that time of year again
+    <break strength="x-weak" time="1s"/>
+    You are the Secret Santa for NAME_OF_TARGET.
+    That's SPELLED_NAME.
+    <break strength="x-weak" time="200ms"/>
+    NAME_OF_TARGET.
+    <break strength="x-weak" time="1s"/>
+    Merry Christmas.
+    <prosody rate="x-slow">Good bye.</prosody>
+  </Say>
+</Response>

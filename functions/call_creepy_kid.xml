@@ -1,0 +1,10 @@
+<Response>
+  <Say voice="Polly.Ivy">
+    <break strength="x-weak" time="2s"/>
+    Hello NAME_OF_RECEIVER, Remember me?
+    <break strength="x-weak" time="1s"/>
+    It's that time of year again. Secret Santa
+    <break strength="x-weak" time="500ms"/>
+    <prosody rate="x-slow">Good bye.</prosody>
+  </Say>
+</Response>

@@ -1,0 +1,176 @@
+$VIEWPORTS_CONFIG: up-to 480px it-is "tiny",
+  up-to 800px it-is "small",
+  up-to 1200px it-is "medium",
+  up-to 1800px it-is "large",
+  beyond-that it-is "huge";
+
+@import 'reset';
+@import 'viewports';
+@import 'welcome';
+@import 'form_page';
+@import 'header';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #A01818;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root,
+#root>div {
+  height: 100%;
+}
+
+#root>div {
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.Container {
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+  height: 100%;
+
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100%;
+
+  >* {
+    width: 100%;
+  }
+
+  .Header {
+    align-self: flex-start;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Footer {
+    align-self: flex-end;
+  }
+}
+
+
+.Button,
+input[type="submit"] {
+  background-color: #ED4141;
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 2px 2px 0px 2px rgba(206, 52, 52, 1);
+  cursor: pointer;
+
+  &.Secondary {
+    background-color: #838383;
+    box-shadow: 2px 2px 0px 2px rgba(90, 90, 90, 1);
+  }
+
+  &.Faded {
+    background-color: #b72c2c;
+    box-shadow: 2px 2px 0px 2px #941616;
+  }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.pushdown {
+
+    .Button {
+      width: 80%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+$particle_amount: 200;
+
+.particle {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: absolute;
+  background-color: #ffffff;
+  animation-name: fall;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+}
+
+@for $i from 1 through $particle_amount {
+  $size: 2 + random(10);
+  $animation_length: 17 - $size + random(17);
+  $animation_length_half: 4 + round(random(15) / 2);
+  $blurryness: round($size/2) +px;
+
+  .particle:nth-child(#{$i}) {
+    z-index: round($size);
+    width: $size + px;
+    height: $size + px;
+    border-radius: $size + px;
+    animation-duration: $animation_length + s;
+    animation-delay: random($animation_length_half) * -1 + s;
+    box-shadow: 0px 0px $blurryness $blurryness rgb(255, 255, 255);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh)
+  }
+
+  100% {
+    transform: translateY(100vh)
+  }
+}
