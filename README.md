@@ -1,6 +1,14 @@
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/zzm45po7jgu146nujgks.png)
 
 # Secret Santa
+
+![Secret Santa](santa.png)
+
+
+This is a project built for a YouTube video. Just a simple prototype, not a full fledged, production ready application.
+
+if you're interested, check out the video to get better understanding on what it really is.
+
+https://youtu.be/9B7RUaB_lx4
 
 The "problem" I'm solving here:
 --
